@@ -7,17 +7,11 @@
   --text-color-dark-secondary: #37474f; /* secondary text */
   --text-color-light: #fff;
   --text-color-light-secondary: #b0bec5;
-
-  /* below are default color for both light and dark theme, they are star color, and shadow of earth and moon */
-  --color-star-light: #dee4e7; /* stars background-color */
-  --light-shadow: #ffffffcc; /* light shadow */
-  --inner-black-shadow: #000000e6; /* inner black shadow */
-  --outer-grey-shadow: #ffffff4d; /* outer grey shadow */
 }
 
 [data-user-theme="dark"] {
   --color-mode: var(--color-dark);
-  --color-sky: var(--color-bg-dark); /* color-sky-dark */
+  --color-bg: var(--color-bg-dark); /* color-sky-dark */
   --text-color-primary: var(--text-color-light); /* text color light theme */
   --text-color-secondary: var(--text-color-light-secondary);
   --color-bg-themebox: var(--color-bg-themebox-dark);
@@ -26,7 +20,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-mode: var(--color-dark);
-    --color-sky: var(--color-bg-dark); /* color-sky-dark */
+    --color-bg: var(--color-bg-dark); /* color-sky-dark */
     --text-color-primary: var(--text-color-light); /* text color light theme */
     --text-color-secondary: var(--text-color-light-secondary);
     --color-bg-themebox: var(--color-bg-themebox-dark);
@@ -35,7 +29,7 @@
 
 [data-user-theme="light"] {
   --color-mode: var(--color-light);
-  --color-sky: var(--color-bg-light); /* color-sky-light */
+  --color-bg: var(--color-bg-light); /* color-sky-light */
   --text-color-parimary: var(--text-color-dark); /* text color light theme */
   --text-color-secondary: var(--text-color-dark-secondary); /* secondary text */
   --color-bg-themebox: var(--color-bg-themebox-light);
@@ -57,6 +51,7 @@ body {
   grid-template: repeat(3, 33.33vh) / repeat(3, 33.33vw);
   width: 100%;
   height: 100%;
+  background-color: var(--color-bg);
 }
 
 .header {
@@ -176,7 +171,7 @@ body {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   width: 7vw;
-  height: 20%;
+  height: 100%;
   background-color: var(--color-sky);
   display: flex;
   justify-content: center;
@@ -315,7 +310,7 @@ body {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .container-toggle {
     position: absolute;
-    left: -30px;
+    left: -40px;
     top: -1px;
   }
 }
@@ -338,7 +333,7 @@ body {
 @media screen and (min-width: 1201px) {
   .container-toggle {
     position: absolute;
-    left: -90px;
-    top: -2px;
+    left: -95px;
+    top: -3px;
   }
 }
