@@ -1,12 +1,12 @@
 :root {
-  --color-bg-dark: #121212; /* color-sky-dark */
-  --color-bg-light: #dee4e7; /* color-sky-light */
+  --color-bg-dark: #202124; /* color-bg-dark */
+  --color-bg-light: #dee4e7; /* color-bg-light */
   --color-bg-themebox-dark: #374151; /* theme box-color */
   --color-bg-themebox-light: #fff; /* theme-box-color */
-  --text-color-dark: #222222; /* text color light theme */
-  --text-color-dark-secondary: #37474f; /* secondary text */
-  --text-color-light: #fff;
-  --text-color-light-secondary: #b0bec5;
+  --text-color-dark: #222222; /* text color dark */
+  --text-color-dark-secondary: #37474f; /* secondary dark text */
+  --text-color-light: #fff; /* text color white */
+  --text-color-light-secondary: #b0bec5; /*secondary white text */
   --dark-theme-logo: url("../img/logo/logo_white.png");
   --light-theme-logo: url("../img/logo/logo_black.png");
   --black-shadow: #37474f;
