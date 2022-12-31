@@ -6,12 +6,9 @@
     r = document.documentElement.getAttribute("data-user-theme");
   if (o) {
     o !== r && document.documentElement.setAttribute("data-user-theme", o);
-    const e = document.querySelector("web-lighthouse-viewer article.lh-root");
-    e && e.classList.toggle("lh-dark", "dark" === o);
   }
 }),
   window.applyThemeSetting();
-
 /* theme toggle button */
 let toggle = document.getElementById("toggle-theme");
 let container = document.getElementById("container-toggle");
