@@ -10,6 +10,12 @@
       content="This page show my ability and skills of font-end web development"
     />
     <link rel="stylesheet" href="css\style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Ravphas R. Portfolio</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
@@ -39,20 +45,27 @@
       </div>
       <nav id="nav-bar" class="navbar-container hide">
         <ul>
-          <li><a href="#Home">Home</a></li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li class="nav-list"><a href="#Home">Home</a></li>
+          <li class="nav-list"><a href="#About">About</a></li>
+          <li class="nav-list"><a href="#project">Projects</a></li>
+          <li class="nav-list"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <button id="navbar-toggle-btn" class="right-btn">
         <i id="icon-menu" class="fa-solid fa-bars"></i>
-        <div class="small-navbar">
       </button>
-      
     </header>
     <main>
-      <section id="Home"></section>
+      <section id="Home" class="home-container">
+        <div class="font-5rem">
+          <p>Hi everyone, <span class="blue">I'm Raviphas.</span></p>
+          <p>I am a <span></span></p>
+        </div>
+        <div class="btn-container">
+          <button>about</button>
+          <button>project</button>
+        </div>
+      </section>
       <section id="about" style="padding-top: 5000px"></section>
     </main>
 

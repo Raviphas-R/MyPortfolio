@@ -20,10 +20,21 @@ $("#navbar-toggle-btn").click(function () {
   }
 });
 
+$(".nav-list").click(function () {
+  let navToggle = $("#nav-bar").attr("class");
+  if (navToggle == "navbar-container navbar-open") {
+    $("#nav-bar").removeClass("navbar-open");
+    $("#nav-bar").addClass("navbar-close");
+    $("#icon-menu").removeClass("fa-solid fa-xmark");
+    $("#icon-menu").addClass("fa-solid fa-bars");
+  }
+});
+
 $(window).on("resize", function () {
-  if ($(this).width() >= 880) {
+  if ($(this).width() >= 940) {
     $("#nav-bar").addClass("hide");
     $("#nav-bar").removeClass("navbar-close navbar-open");
+
     $("#nav-bar > ul").removeClass("navbar-open");
     $("#icon-menu").removeClass("fa-solid fa-xmark");
     $("#icon-menu").addClass("fa-solid fa-bars");
