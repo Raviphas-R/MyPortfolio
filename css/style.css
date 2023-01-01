@@ -263,7 +263,8 @@ ul {
   background-color: var(--color-bg);
 }
 
-.fa-solid.fa-bars {
+.fa-solid.fa-bars,
+.fa-solid.fa-xmark {
   font-size: 2rem;
   color: var(--text-color-primary);
 }
@@ -280,7 +281,7 @@ ul {
   }
 }
 
-@keyframes dropdown {
+@keyframes navbar-open {
   0% {
     transform: scaleY(0);
   }
@@ -289,9 +290,23 @@ ul {
     transform: scaleY(1);
   }
 }
+@keyframes navbar-close {
+  0% {
+    transform: scaleY(1);
+  }
 
-.navbar-toggled {
-  animation: dropdown 400ms ease-in-out forwards;
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+.navbar-open {
+  animation: navbar-open 400ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+.navbar-close {
+  animation: navbar-close 400ms ease-in-out forwards;
   transform-origin: top center;
 }
 
