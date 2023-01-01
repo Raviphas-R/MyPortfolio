@@ -1,6 +1,8 @@
 :root {
   --color-bg-dark: #202124; /* color-bg-dark */
   --color-bg-light: #dee4e7; /* color-bg-light */
+  --color-bg-dark-secondary: #37474f80; /*color-bg-dark-secondary*/
+  --color-bg-light-secondary: #b0bec580; /*color-bg-light-secondary*/
   --color-bg-themebox-dark: #374151; /* theme box-color */
   --color-bg-themebox-light: #fff; /* theme-box-color */
   --text-color-dark: #222222; /* text color dark */
@@ -16,6 +18,7 @@
 [data-user-theme="dark"] {
   --color-mode: var(--color-dark);
   --color-bg: var(--color-bg-dark); /* color-sky-dark */
+  --color-bg-secondary: var(--color-bg-dark-secondary);
   --text-color-primary: var(--text-color-light); /* text color light theme */
   --text-color-secondary: var(--text-color-light-secondary);
   --color-bg-themebox: var(--color-bg-themebox-dark);
@@ -27,6 +30,7 @@
   :root {
     --color-mode: var(--color-dark);
     --color-bg: var(--color-bg-dark); /* color-sky-dark */
+    --color-bg-secondary: var(--color-bg-dark-secondary);
     --text-color-primary: var(--text-color-light); /* text color light theme */
     --text-color-secondary: var(--text-color-light-secondary);
     --color-bg-themebox: var(--color-bg-themebox-dark);
@@ -38,6 +42,7 @@
 [data-user-theme="light"] {
   --color-mode: var(--color-light);
   --color-bg: var(--color-bg-light); /* color-sky-light */
+  --color-bg-secondary: var(--color-bg-light-secondary);
   --text-color-primary: var(--text-color-dark); /* text color light theme */
   --text-color-secondary: var(--text-color-dark-secondary); /* secondary text */
   --color-bg-themebox: var(--color-bg-themebox-light);
@@ -45,11 +50,6 @@
   --shadow: var(--black-shadow);
 }
 
-#logo {
-  content: var(--logo);
-  width: 250px;
-  height: 100px;
-}
 * {
   margin: 0;
   padding: 0;
@@ -111,6 +111,12 @@ ul {
   top: 0;
   left: 0;
   box-shadow: 0 0.5rem 1rem 0 var(--shadow);
+}
+
+#logo {
+  content: var(--logo);
+  width: 250px;
+  height: 100px;
 }
 
 /* add theme toggle container */
@@ -274,16 +280,30 @@ ul {
   }
 }
 
+@keyframes dropdown {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.navbar-toggled {
+  animation: dropdown 400ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
 @media screen and (max-width: 900px) {
   .hide {
     display: none;
   }
   .navbar-container {
     position: absolute;
-    top: 100px;
+    top: 104px;
     width: 100vw;
-
-    background-color: #374151;
+    background-color: var(--color-bg-secondary);
   }
 
   #nav-bar > ul {
@@ -292,7 +312,7 @@ ul {
 
   #nav-bar ul li {
     font-size: 2rem;
-    padding: 3rem 0rem;
+    padding: clamp(1rem, 5vh, 3rem) 0rem;
     color: var(--text-color-primary);
     display: block;
     text-align: center;
