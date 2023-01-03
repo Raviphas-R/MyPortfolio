@@ -11,7 +11,7 @@
   --text-color-light: whitesmoke; /* text color white */
   --text-color-light-secondary: #b0bec5; /*secondary white text */
   --text-color-blue-dark: #5dd9f8;
-  --text-color-blue-light: #0000ffcc;
+  --text-color-blue-light: #0000ff;
   --dark-theme-logo: url("../img/logo/logo_white.png");
   --light-theme-logo: url("../img/logo/logo_black.png");
   --dark-theme-home-bg: url("../img/bg/home-bg-dark.png");
@@ -379,12 +379,9 @@ ul {
   font-size: 2rem;
 }
 
-.font-4rem {
-  font-size: 4rem;
-}
-
 .home-text {
-  font-size: 5rem;
+  padding-top: 6rem;
+  font-size: 6rem;
   color: var(--text-color-primary);
 }
 .blue {
@@ -399,16 +396,26 @@ ul {
   width: 100%;
 }
 
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: orange;
-  }
+.typing {
+  height: auto;
+  margin-left: 10px;
+  position: relative;
 }
-
-.wrap {
-  animation: blink-caret 0.5s step-end infinite;
+.typing::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: -5px;
+  width: 1px;
+  height: 80%;
+  border-right: 5px solid var(--text-color-primary);
+  animation: blink 0.5s ease infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
