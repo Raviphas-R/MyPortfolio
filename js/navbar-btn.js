@@ -40,7 +40,7 @@ $(".nav-list a").click(function () {
 });
 
 $(window).on("resize", function () {
-  if ($(this).width() >= 940) {
+  if ($(this).width() >= 750) {
     navBar.addClass("hide");
     navBar.removeClass("navbar-close navbar-open");
     closeMenu();
