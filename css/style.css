@@ -8,20 +8,27 @@
   --color-bg-themebox-light: #fff; /* theme-box-color */
   --text-color-dark: #222222; /* text color dark */
   --text-color-dark-secondary: #37474f; /* secondary dark text */
-  --text-color-light: #fff; /* text color white */
+  --text-color-light: whitesmoke; /* text color white */
   --text-color-light-secondary: #b0bec5; /*secondary white text */
+  --text-color-blue-dark: #5dd9f8;
+  --text-color-blue-light: #0000ffcc;
   --dark-theme-logo: url("../img/logo/logo_white.png");
   --light-theme-logo: url("../img/logo/logo_black.png");
+  --dark-theme-home-bg: url("../img/bg/home-bg-dark.png");
+  --light-theme-home-bg: url("../img/bg/home-bg-light.png");
+
   --black-shadow: #37474f;
-  --light-shadow: #ffffff99;
+  --light-shadow: #052bff23;
 }
 
 [data-user-theme="dark"] {
   --color-mode: var(--color-dark);
   --color-bg: var(--color-bg-dark); /* color-sky-dark */
   --color-bg-secondary: var(--color-bg-dark-secondary);
+  --home-bg: var(--dark-theme-home-bg);
   --text-color-primary: var(--text-color-light); /* text color light theme */
   --text-color-secondary: var(--text-color-light-secondary);
+  --text-blue: var(--text-color-blue-dark);
   --color-bg-themebox: var(--color-bg-themebox-dark);
   --logo: var(--dark-theme-logo);
   --shadow: var(--light-shadow);
@@ -32,8 +39,10 @@
     --color-mode: var(--color-dark);
     --color-bg: var(--color-bg-dark); /* color-sky-dark */
     --color-bg-secondary: var(--color-bg-dark-secondary);
+    --home-bg: var(--dark-theme-home-bg);
     --text-color-primary: var(--text-color-light); /* text color light theme */
     --text-color-secondary: var(--text-color-light-secondary);
+    --text-blue: var(--text-color-blue-dark);
     --color-bg-themebox: var(--color-bg-themebox-dark);
     --logo: var(--dark-theme-logo);
     --shadow: var(--light-shadow);
@@ -44,8 +53,10 @@
   --color-mode: var(--color-light);
   --color-bg: var(--color-bg-light); /* color-sky-light */
   --color-bg-secondary: var(--color-bg-light-secondary);
+  --home-bg: var(--light-theme-home-bg);
   --text-color-primary: var(--text-color-dark); /* text color light theme */
   --text-color-secondary: var(--text-color-dark-secondary); /* secondary text */
+  --text-blue: var(--text-color-blue-light);
   --color-bg-themebox: var(--color-bg-themebox-light);
   --logo: var(--light-theme-logo);
   --shadow: var(--black-shadow);
@@ -372,9 +383,32 @@ ul {
   font-size: 4rem;
 }
 
-.font-5rem {
+.home-text {
   font-size: 5rem;
+  color: var(--text-color-primary);
 }
 .blue {
-  color: blue;
+  color: var(--text-blue);
+}
+
+.home-background {
+  background-image: var(--home-bg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 100px;
+  width: 100%;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+.wrap {
+  animation: blink-caret 0.5s step-end infinite;
 }
