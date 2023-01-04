@@ -46,7 +46,7 @@
       <nav id="nav-bar" class="navbar-container hide">
         <ul>
           <li class="nav-list"><a href="#Home">Home</a></li>
-          <li class="nav-list"><a href="#About">About</a></li>
+          <li class="nav-list"><a href="#about">About</a></li>
           <li class="nav-list"><a href="#project">Projects</a></li>
           <li class="nav-list"><a href="#contact">Contact</a></li>
         </ul>
@@ -65,8 +65,8 @@
           </p>
         </div>
         <div class="btn-container">
-          <button>about</button>
-          <button>project</button>
+          <a href="#about" class="btn-link link-about">about</a>
+          <a href="project" class="btn-link link-project">project</a>
         </div>
       </section>
       <section id="about" style="padding-top: 5000px"></section>
@@ -75,5 +75,10 @@
     <script src="js\theme-toggle.js"></script>
     <script src="js\navbar-btn.js"></script>
     <script src="js\typing.js"></script>
+    <script>
+      window.onload = function () {
+        window.location.hash = "";
+      };
+    </script>
   </body>
 </html>

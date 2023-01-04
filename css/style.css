@@ -66,6 +66,7 @@
   margin: 0;
   padding: 0;
   font-family: "Andika", sans-serif;
+  font-weight: 400;
 }
 
 *,
@@ -127,7 +128,7 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 99999;
   background-color: var(--color-bg);
   box-shadow: 0 0.5rem 1rem 0 var(--shadow);
 }
@@ -161,10 +162,6 @@ ul {
   background-color: var(--color-bg-themebox);
 }
 
-.container-toggle.dark .toggle-theme {
-  background-color: var(--color-bg-themebox);
-}
-
 .toggle-theme .circle {
   position: absolute;
   width: 1rem;
@@ -181,16 +178,11 @@ ul {
   animation-fill-mode: forwards;
 }
 
-.sun-theme {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 0.1rem;
-  opacity: 0;
-}
+.sun-theme,
 .moon-theme {
   width: 1.5rem;
   height: 1.5rem;
-  margin-left: 0.1rem;
+  margin-right: 0.1rem;
   opacity: 0;
 }
 
@@ -505,25 +497,13 @@ ul {
   width: 100%;
 }
 
-.btn-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.btn-container > button {
-  border-radius: 15px;
-  padding: 0rem 0.5rem 0.3rem;
-  margin: 1rem;
-  font-size: 2rem;
-}
-
 .home-text {
-  padding-bottom: 2rem;
   font-size: clamp(5rem, 4rem + 2vw, 6rem);
   color: var(--text-color-primary);
 }
 .blue {
   color: var(--text-blue);
+  font-weight: 600;
 }
 
 .typing {
@@ -550,15 +530,63 @@ ul {
   }
 }
 
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-link {
+  border: 3px solid black;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-size: 2rem;
+  font-weight: 800;
+  cursor: pointer;
+  margin: 60px 90px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.link-about,
+.link-project {
+  color: black;
+}
+
+.link-about:hover,
+.link-project:hover {
+  color: #fff;
+}
+
+.btn-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #0081c9;
+  z-index: -1;
+  transition: 0.8s;
+}
+.link-about::before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.link-project::before {
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.link-about:hover::before,
+.link-project:hover::before {
+  height: 180%;
+}
+
 @media screen and (max-width: 480px) {
-  .btn-container > button {
-    border-radius: 8px;
-    padding: 0rem 0.5rem 0.3rem;
-    margin: 1rem;
-    font-size: 0.5rem;
-  }
   .home-text {
     font-size: 1.5rem;
+    padding-bottom: 1rem;
     color: var(--text-color-primary);
     margin-top: clamp(80px, 60px + 5vw, 120px);
   }
@@ -567,17 +595,22 @@ ul {
     padding-top: 10px;
     background-position: center 66px;
   }
+  .btn-link {
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    padding: 2px 5px;
+    font-size: 0.6rem;
+    font-weight: 400;
+    margin: 0px 30px;
+    transition: 0.8s;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .btn-container > button {
-    border-radius: 8px;
-    padding: 0rem 0.5rem 0.3rem;
-    margin: 1rem;
-    font-size: 0.5rem;
-  }
   .home-text {
     font-size: 2rem;
+    padding-bottom: 1.5rem;
     color: var(--text-color-primary);
     margin-top: clamp(80px, 60px + 5vw, 120px);
   }
@@ -586,23 +619,37 @@ ul {
     padding-top: 50px;
     background-position: center 66px;
   }
+  .btn-link {
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0px 30px;
+    transition: 0.8s;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .btn-container > button {
-    border-radius: 8px;
-    padding: 0rem 0.5rem 0.3rem;
-    margin: 1rem;
-    font-size: 0.5rem;
-  }
   .home-text {
-    font-size: 4rem;
+    font-size: clamp(3rem, 2rem + 2vw, 4rem);
     color: var(--text-color-primary);
-    margin-top: clamp(80px, 60px + 5vw, 120px);
+    margin-top: clamp(50px, 40px + 3vw, 75px);
   }
   .home-container {
     justify-content: start;
     padding-top: 100px;
     background-position: center 66px;
+  }
+  .btn-link {
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 40px 60px;
+    transition: 0.8s;
   }
 }
