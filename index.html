@@ -9,7 +9,7 @@
       name="description"
       content="This page show my ability and skills of font-end web development"
     />
-    <link rel="stylesheet" href="css\style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,18 +26,18 @@
   <body>
     <header class="container-header">
       <a href="#Home" class="left"
-        ><img src="img/logo/logo_black.png" id="logo"
+        ><img src="./img/logo/logo_black.png" id="logo"
       /></a>
       <div class="container-toggle" id="container-toggle">
         <div class="toggle-theme" id="toggle-theme">
           <div class="circle"></div>
           <img
-            src="img\themeicon\sun_icon.png"
+            src="./img/themeicon/sun_icon.png"
             id="sun-theme"
             class="sun-theme animated"
           />
           <img
-            src="img\themeicon\moon_icon.png"
+            src="./img/themeicon/moon_icon.png"
             id="moon-theme"
             class="moon-theme"
           />
@@ -66,19 +66,54 @@
         </div>
         <div class="btn-container">
           <a href="#about" class="btn-link link-about">about</a>
-          <a href="project" class="btn-link link-project">project</a>
+          <a href="#project" class="btn-link link-project">project</a>
         </div>
       </section>
-      <section id="about" style="padding-top: 5000px"></section>
+      <section id="about" class="about-container">
+        <div class="about-me">
+          <p class="title">Nice to meet you</p>
+          <p class="content">
+            Let me introduce myself, I'm a tech passionate and a sport & nature
+            lover, with an innate curiosity that make me a self-learning
+            multiple times. Perpetually working and learning to leveling up one
+            day at time.
+          </p>
+        </div>
+        <div class="about-me-content">
+          <div>
+            <p class="sub-title">Front-end Developer</p>
+            <p class="content">
+              I'm very interested and looking forward to new challenges that
+              will make me evoles as a software developer. I have a strong
+              interest in web development projects with new techonology that
+              bring value to the society.
+            </p>
+          </div>
+          <div class="tech-container">
+            <p class="sub-title">Tools and techonologies</p>
+            <p class="content">
+              These are some tool and techonologies that I am using or intested
+              in learning.
+            </p>
+            <div class="logo-container">
+              <img src="./img/logo/icons8-html-5.svg" />
+              <img src="./img/logo/icons8-css3.svg" />
+              <img src="./img/logo/icons8-javascript.svg" />
+              <img src="./img/logo/icons8-jquery.svg" />
+              <img src="./img/logo/icons8-bootstrap.svg" />
+              <img src="./img/logo/icons8-react.svg" />
+              <img src="./img/logo/icons8-visual-studio-code-2019.svg" />
+              <img src="./img/logo/icons8-github.svg" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="project" style="padding-top: 5000px"></section>
     </main>
 
-    <script src="js\theme-toggle.js"></script>
-    <script src="js\navbar-btn.js"></script>
-    <script src="js\typing.js"></script>
-    <script>
-      window.onload = function () {
-        window.location.hash = "";
-      };
-    </script>
+    <script src="./js/theme-toggle.js"></script>
+    <script src="./js/navbar-btn.js"></script>
+    <script src="./js/typing.js"></script>
+    <script src="./js/scrolling.js"></script>
   </body>
 </html>
