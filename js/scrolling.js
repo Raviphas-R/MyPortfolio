@@ -21,5 +21,6 @@ $(() => {
 
   scrolling(".about-me");
   scrolling(".about-me-content");
+  scrolling(".project-container");
   scrolling(".contact-container");
 });
