@@ -977,6 +977,11 @@ ul {
   background-size: contain;
 }
 
+.carousel-item--3 .carousel-item_image {
+  background-image: url("../img/project-img/bootstrap.png");
+  background-size: contain;
+}
+
 .carousel-item_btn {
   width: 35%;
   color: var(--text-color-carousel-title);
