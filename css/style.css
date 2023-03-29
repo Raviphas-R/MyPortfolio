@@ -144,6 +144,10 @@ ul {
   margin-right: 2rem;
 }
 
+.bold {
+  font-weight: 600;
+}
+
 /* header */
 .container-header {
   display: flex;
@@ -968,16 +972,26 @@ ul {
 }
 
 .carousel-item--1 .carousel-item_image {
-  background-image: url("../img/project-img/port1.png");
-  background-size: contain;
-}
-
-.carousel-item--2 .carousel-item_image {
   background-image: url("../img/project-img/react1.png");
   background-size: contain;
 }
 
+.carousel-item--2 .carousel-item_image {
+  background-image: url("../img/project-img/angular.png");
+  background-size: contain;
+}
+
 .carousel-item--3 .carousel-item_image {
+  background-image: url("../img/project-img/natours.png");
+  background-size: contain;
+}
+
+.carousel-item--4 .carousel-item_image {
+  background-image: url("../img/project-img/fokify.png");
+  background-size: contain;
+}
+
+.carousel-item--5 .carousel-item_image {
   background-image: url("../img/project-img/bootstrap.png");
   background-size: contain;
 }
